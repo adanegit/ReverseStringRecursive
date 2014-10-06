@@ -19,6 +19,8 @@ public class ReverseStringRecursive {
         // TODO code application logic here
         
         System.out.println(recursiveReverse("Reverse this given input."));
+        System.out.println(naiveApproach("Reverse this given input."));
+        System.out.println(reverseUsingStringBuilder("Reverse this given input."));
     }
     
     public static String recursiveReverse(String input){
@@ -30,6 +32,23 @@ public class ReverseStringRecursive {
             else{
                 return recursiveReverse(input.substring(1)) + input.charAt(0);
             }
+    }
+    
+    public static String naiveApproach(String input){
+    
+        String str = "";
+        
+        for(int i=input.length()-1; i>=0; i--){
+            str += input.charAt(i);
+        }
+        
+        return str;
+    }
+   
+    
+    public static String reverseUsingStringBuilder(String input){
+    
+         return new StringBuilder(input).reverse().toString();
     }
     
 }

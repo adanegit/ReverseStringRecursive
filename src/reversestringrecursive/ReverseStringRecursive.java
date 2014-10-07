@@ -51,7 +51,7 @@ public class ReverseStringRecursive {
          return new StringBuilder(input).reverse().toString();
     }
     
-    public static void test(){
+    public static void testFromGitHUB(){
         
         //Pulling 
     }
